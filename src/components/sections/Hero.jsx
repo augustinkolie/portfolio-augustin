@@ -4,7 +4,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import { heroSlides } from '../../data/portfolio';
 import bgImage from '../../assets/images/hero-bg-perfect.png';
-import myCV from '../../assets/images/Cv homme professionnel simple bleu blanc.pdf';
+import myCV from '../../assets/images/cv-de-Augustin.pdf';
 
 const Hero = () => {
     const { language } = useLanguage();
