@@ -26,20 +26,38 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        // Vérification simple côté client
+        if (!formData.firstName.trim() || !formData.email.trim() || !formData.message.trim()) {
+            setStatus('error');
+            setErrorMsg(language === 'fr' ? 'Veuillez remplir au moins le prénom, l\'email et le message.' : 'Please fill in at least first name, email and message.');
+            return;
+        }
+
         setStatus('loading');
         setErrorMsg('');
 
         try {
-            const res = await fetch('http://localhost:5000/api/contact', {
+            // URL de l'API
+            const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://portfolio-backend-eryl.onrender.com';
+            
+            // On s'assure que le sujet a une valeur par défaut si vide
+            const finalSubject = formData.helpType && formData.helpType.trim() !== "" 
+                ? formData.helpType 
+                : "Contact Général";
+
+            const payload = {
+                name: `${formData.firstName} ${formData.lastName}`.trim(),
+                email: formData.email,
+                phone: formData.phone,
+                subject: finalSubject,
+                message: formData.message,
+            };
+
+            const res = await fetch(`${API_BASE_URL}/api/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name: `${formData.firstName} ${formData.lastName}`.trim(),
-                    email: formData.email,
-                    phone: formData.phone,
-                    subject: formData.helpType || 'Contact depuis le portfolio',
-                    message: formData.message,
-                })
+                body: JSON.stringify(payload)
             });
 
             const data = await res.json();
