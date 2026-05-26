@@ -52,7 +52,7 @@ const ParticleSystem = ({ stage, progress }) => {
   const pointsRef = useRef();
   const [targetPositions, setTargetPositions] = useState(null);
   const { viewport } = useThree();
-  const scale = viewport.width < 10 ? 0.6 : 1.1;
+  const scale = viewport.width < 10 ? 0.22 : 1.1;
 
   const sphereData = useMemo(() => {
     const pos = new Float32Array(PARTICLE_COUNT * 3);
@@ -325,23 +325,45 @@ const Preloader = ({ onFinish }) => {
             </Canvas>
           </div>
 
-          {/* New "Welcome" Typewriter Text */}
+          {/* Top text */}
           {stage === 'text' && (
-            <div className="absolute top-[28%] left-1/2 -translate-x-1/2 flex gap-[0.2em] pointer-events-none w-full justify-center">
+            <div className="absolute top-[28%] left-1/2 -translate-x-1/2 flex flex-wrap gap-[0.1em] md:gap-[0.2em] pointer-events-none w-[90%] md:w-full justify-center px-4">
               {"Bienvenue dans l'univers de".split("").map((char, i) => (
                 <motion.span
                   key={i}
                   initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ 
-                    delay: i * 0.08, 
+                    delay: i * 0.05, 
                     duration: 0.4,
                     ease: "easeOut"
                   }}
-                  className="text-orange-500 text-lg md:text-xl font-light tracking-[0.3em] uppercase"
+                  className="text-orange-500 text-[10px] sm:text-xs md:text-xl font-light tracking-[0.15em] md:tracking-[0.3em] uppercase"
                   style={{ color: '#EA580C', textShadow: '0 0 10px rgba(234, 88, 12, 0.3)' }}
                 >
                   {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
+            </div>
+          )}
+
+          {/* Bottom Right text: KOLIE */}
+          {stage === 'text' && (
+            <div className="absolute top-[52%] md:top-[63%] left-1/2 -translate-x-1/2 md:translate-x-[105%] flex gap-[0.2em] pointer-events-none w-[90%] md:w-auto justify-center md:justify-start px-4">
+              {"KOLIE".split("").map((char, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ 
+                    delay: 1.2 + (i * 0.1), 
+                    duration: 0.6,
+                    ease: "easeOut"
+                  }}
+                  className="text-orange-500 text-xl md:text-5xl font-black tracking-[0.2em] md:tracking-[0.3em] uppercase"
+                  style={{ color: '#EA580C', textShadow: '0 0 20px rgba(234, 88, 12, 0.5)' }}
+                >
+                  {char}
                 </motion.span>
               ))}
             </div>
