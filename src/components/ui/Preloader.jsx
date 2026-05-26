@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Float, Center, Text3D, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
@@ -262,36 +262,46 @@ const Preloader = ({ onFinish }) => {
   const [isDone, setIsDone] = useState(false);
 
   useEffect(() => {
-    let t;
+    let interval;
+    let timeout;
+    
     if (stage === 'sphere') {
-        const i = setInterval(() => {
+        interval = setInterval(() => {
             setProgress(p => {
                 if (p >= 1) {
-                    clearInterval(i);
+                    clearInterval(interval);
                     setStage('exploded');
-                    t = setTimeout(() => { setStage('text'); setProgress(0); }, 800);
                     return 1;
                 }
-                return p + 0.009;
+                return p + 0.008;
             });
         }, 16);
-        return () => { clearInterval(i); clearTimeout(t); };
+    } else if (stage === 'exploded') {
+        // Transition to text stage after explosion delay
+        timeout = setTimeout(() => {
+            setStage('text');
+            setProgress(0);
+        }, 1200);
     } else if (stage === 'text') {
-        const i = setInterval(() => {
+        interval = setInterval(() => {
             setProgress(p => {
                 if (p >= 1) {
-                    clearInterval(i);
-                    setTimeout(() => {
+                    clearInterval(interval);
+                    timeout = setTimeout(() => {
                         setIsDone(true);
                         if (onFinish) onFinish();
                     }, 2500);
                     return 1;
                 }
-                return p + 0.014;
+                return p + 0.012;
             });
         }, 16);
-        return () => clearInterval(i);
     }
+
+    return () => {
+        if (interval) clearInterval(interval);
+        if (timeout) clearTimeout(timeout);
+    };
   }, [stage, onFinish]);
 
   return (
@@ -309,7 +319,9 @@ const Preloader = ({ onFinish }) => {
               <color attach="background" args={['#000000']} />
               <ambientLight intensity={0.6} />
               <pointLight position={[0, 0, 15]} intensity={3} color="#ffffff" />
-              <ParticleSystem stage={stage} progress={progress} />
+              <Suspense fallback={null}>
+                <ParticleSystem stage={stage} progress={progress} />
+              </Suspense>
             </Canvas>
           </div>
 
