@@ -97,23 +97,24 @@ app.listen(3000);`
     return (
         <section id="experience" className="py-24 bg-gray-50 dark:bg-gray-900 overflow-hidden">
             <div className="container mx-auto px-4">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-16 border-l-4 border-orange-500 pl-8"
-                >
-                    <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-gray-900 dark:text-white">
-                        {language === 'fr' ? 'Expérience' : 'Experience'}
-                    </h2>
-                    <p className="text-xl text-gray-500 dark:text-gray-400 font-light">
-                        {language === 'fr' 
-                            ? "Découvrez mon parcours à travers mon environnement de travail."
-                            : "Explore my journey through my workspace."}
-                    </p>
-                </motion.div>
+                <div className="max-w-7xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mb-16 border-l-4 border-orange-500 pl-8"
+                    >
+                        <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-gray-900 dark:text-white">
+                            {language === 'fr' ? 'Expérience' : 'Experience'}
+                        </h2>
+                        <p className="text-xl text-gray-500 dark:text-gray-400 font-light">
+                            {language === 'fr' 
+                                ? "Découvrez mon parcours à travers mon environnement de travail."
+                                : "Explore my journey through my workspace."}
+                        </p>
+                    </motion.div>
 
-                <div className="flex flex-col lg:flex-row gap-12 items-start max-w-7xl mx-auto">
+                    <div className="flex flex-col lg:flex-row gap-12 items-start pl-8">
                     {/* Left Side: Experience Text */}
                     <div className="lg:w-5/12 space-y-8">
                         <AnimatePresence mode="wait">
@@ -145,7 +146,7 @@ app.listen(3000);`
 
                         <button 
                             onClick={nextExperience}
-                            className="group flex items-center gap-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-orange-600 dark:hover:bg-orange-500 transition-all duration-300"
+                            className="group flex items-center gap-4 bg-transparent border border-gray-900 dark:border-white text-gray-900 dark:text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300"
                         >
                             {language === 'fr' ? 'Expérience Suivante' : 'Next Experience'}
                             <ChevronRight className="group-hover:translate-x-2 transition-transform" />
@@ -199,6 +200,7 @@ app.listen(3000);`
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

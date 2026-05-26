@@ -10,24 +10,25 @@ const Education = () => {
 
     return (
         <section id="education" className="py-24 bg-white dark:bg-gray-900 overflow-hidden">
-            <div className="container mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-20 border-l-4 border-orange-500 pl-8 text-left"
-                >
-                    <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-gray-900 dark:text-white">
-                        {language === 'fr' ? 'Formation' : 'Education'}
-                    </h2>
-                    <p className="text-gray-500 dark:text-gray-400 max-w-2xl text-lg">
-                        {language === 'fr' 
-                            ? "Les fondations académiques de mon expertise en ingénierie logicielle."
-                            : "The academic foundations of my software engineering expertise."}
-                    </p>
-                </motion.div>
+            <div className="container mx-auto px-4">
+                <div className="max-w-7xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mb-16 border-l-4 border-orange-500 pl-8 text-left"
+                    >
+                        <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-gray-900 dark:text-white">
+                            {language === 'fr' ? 'Formation' : 'Education'}
+                        </h2>
+                        <p className="text-xl text-gray-500 dark:text-gray-400 font-light">
+                            {language === 'fr' 
+                                ? "Les fondations académiques de mon expertise en ingénierie logicielle."
+                                : "The academic foundations of my software engineering expertise."}
+                        </p>
+                    </motion.div>
 
-                <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
+                    <div className="grid gap-8 md:grid-cols-2">
                     {education.map((item, index) => (
                         <motion.div
                             key={item.id}
@@ -69,6 +70,7 @@ const Education = () => {
                             </div>
                         </motion.div>
                     ))}
+                    </div>
                 </div>
             </div>
         </section>

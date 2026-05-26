@@ -8,25 +8,26 @@ const Projects = () => {
     const { language } = useLanguage();
 
     return (
-        <section id="projects" className="py-24 bg-gray-50 dark:bg-[#0a0a0a] text-gray-900 dark:text-white transition-colors duration-300">
-            <div className="container mx-auto px-6">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-20 border-l-4 border-[#ffcc00] pl-8"
-                >
-                    <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-gray-900 dark:text-white">
-                        {language === 'fr' ? 'Mes Projets' : 'Featured Projects'}
-                    </h2>
-                    <p className="text-gray-500 dark:text-gray-400 max-w-2xl text-lg">
-                        {language === 'fr'
-                            ? "Une sélection de mes travaux récents, alliant technicité et design."
-                            : "A selection of my recent works, combining technicality and design."}
-                    </p>
-                </motion.div>
+        <section id="projects" className="pt-8 pb-12 bg-gray-50 dark:bg-[#0a0a0a] text-gray-900 dark:text-white transition-colors duration-300">
+            <div className="container mx-auto px-4">
+                <div className="max-w-7xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mb-16 border-l-4 border-[#ffcc00] pl-8"
+                    >
+                        <h2 className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter text-gray-900 dark:text-white">
+                            {language === 'fr' ? 'Mes Projets' : 'Featured Projects'}
+                        </h2>
+                        <p className="text-xl text-gray-500 dark:text-gray-400 font-light">
+                            {language === 'fr'
+                                ? "Une sélection de mes travaux récents, alliant technicité et design."
+                                : "A selection of my recent works, combining technicality and design."}
+                        </p>
+                    </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {projectsData.map((project, index) => (
                         <motion.div
                             key={project.id}
@@ -34,10 +35,10 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="flex flex-col h-full group"
+                            className="flex flex-col h-full group border-x border-gray-200 dark:border-white/10 px-8 pb-8 hover:border-[#ffcc00] dark:hover:border-[#ffcc00] transition-colors duration-300"
                         >
                             {/* Image Container */}
-                            <div className="relative overflow-hidden aspect-[16/9] mb-8 border-l-4 border-[#ffcc00]">
+                            <div className="relative overflow-hidden aspect-[16/9] mb-8 -mx-8">
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -121,6 +122,7 @@ const Projects = () => {
                             </div>
                         </motion.div>
                     ))}
+                    </div>
                 </div>
             </div>
         </section>
