@@ -79,7 +79,7 @@ const Navbar = () => {
                         <button
                             onClick={toggleTheme}
                             className={cn(
-                                "p-2 rounded-full transition-colors",
+                                "p-2 rounded-sm transition-colors",
                                 scrolled
                                     ? "hover:bg-gray-100 dark:hover:bg-gray-800"
                                     : "text-white hover:bg-white/10"
@@ -92,7 +92,7 @@ const Navbar = () => {
                             <button
                                 onClick={() => setIsLangOpen(!isLangOpen)}
                                 className={cn(
-                                    "flex items-center gap-3 px-4 py-2 rounded-full transition-all border shadow-sm hover:shadow-md",
+                                    "flex items-center gap-3 px-4 py-2 rounded-sm transition-all border shadow-sm hover:shadow-md",
                                     scrolled
                                         ? "text-gray-700 border-gray-200 bg-white/50 hover:bg-gray-50 dark:text-gray-300 dark:border-gray-700 dark:bg-gray-800/50"
                                         : "text-white border-white/30 bg-white/10 hover:bg-white/20 backdrop-blur-sm"
@@ -127,7 +127,7 @@ const Navbar = () => {
                                             initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                             animate={{ opacity: 1, y: 0, scale: 1 }}
                                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                            className="absolute right-0 mt-3 w-40 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden z-50 p-1.5"
+                                            className="absolute right-0 mt-3 w-40 bg-white dark:bg-gray-800 rounded-sm shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden z-50 p-1.5"
                                         >
                                             <button
                                                 onClick={() => {
@@ -168,7 +168,7 @@ const Navbar = () => {
                     <button
                         onClick={toggleTheme}
                         className={cn(
-                            "p-2 rounded-full transition-colors",
+                            "p-2 rounded-sm transition-colors",
                             scrolled 
                                 ? "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" 
                                 : "text-white hover:bg-white/10"

@@ -134,7 +134,7 @@ const Contact = () => {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="bg-white rounded-xl p-6 md:p-12 shadow-2xl relative z-10 w-full"
+                        className="bg-white rounded-sm p-6 md:p-12 shadow-2xl relative z-10 w-full"
                     >
                         <div className="text-center mb-10">
                             <div className="flex justify-center text-gray-400 mb-4">
@@ -155,7 +155,7 @@ const Contact = () => {
                                         type="text"
                                         name="firstName"
                                         value={formData.firstName}
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
+                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-sm focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -167,7 +167,7 @@ const Contact = () => {
                                         type="text"
                                         name="lastName"
                                         value={formData.lastName}
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
+                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-sm focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -181,7 +181,7 @@ const Contact = () => {
                                     type="email"
                                     name="email"
                                     value={formData.email}
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
+                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-sm focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
                                     onChange={handleChange}
                                 />
                             </div>
@@ -194,7 +194,7 @@ const Contact = () => {
                                     type="text"
                                     name="company"
                                     value={formData.company}
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
+                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-sm focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
                                     onChange={handleChange}
                                 />
                             </div>
@@ -219,7 +219,7 @@ const Contact = () => {
                                         name="phone"
                                         value={formData.phone}
                                         placeholder="610 00 00 00"
-                                        className="w-full pl-24 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
+                                        className="w-full pl-24 pr-4 py-3 bg-gray-50 border border-gray-100 rounded-sm focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900"
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -232,7 +232,7 @@ const Contact = () => {
                                 <select
                                     name="helpType"
                                     value={formData.helpType}
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900 appearance-none bg-no-repeat bg-[right_1rem_center] bg-[length:1em_1em]"
+                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-sm focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900 appearance-none bg-no-repeat bg-[right_1rem_center] bg-[length:1em_1em]"
                                     onChange={handleChange}
                                 >
                                     <option value="">{language === 'fr' ? 'Sélectionnez une option' : 'Select an option'}</option>
@@ -250,7 +250,7 @@ const Contact = () => {
                                     name="message"
                                     rows="4"
                                     value={formData.message}
-                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900 resize-none"
+                                    className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-sm focus:ring-2 focus:ring-red-600 outline-none transition-all text-gray-900 resize-none"
                                     onChange={handleChange}
                                 ></textarea>
                             </div>
@@ -269,7 +269,7 @@ const Contact = () => {
                                 <button
                                     type="submit"
                                     disabled={status === 'loading'}
-                                    className="w-full py-4 bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white rounded-lg font-bold text-sm uppercase tracking-widest shadow-xl shadow-red-600/20 transition-all flex items-center justify-center gap-3 active:scale-95 disabled:cursor-not-allowed"
+                                    className="w-full py-4 bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white rounded-sm font-bold text-sm uppercase tracking-widest shadow-xl shadow-red-600/20 transition-all flex items-center justify-center gap-3 active:scale-95 disabled:cursor-not-allowed"
                                 >
                                     {status === 'loading' ? (
                                         <>

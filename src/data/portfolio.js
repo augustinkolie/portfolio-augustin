@@ -284,31 +284,59 @@ export const experienceData = {
 export const projectsData = [
     {
         id: 1,
-        title: "E-commerce Dashboard",
-        description: { fr: "Un tableau de bord complet pour la gestion de ventes.", en: "A comprehensive dashboard for sales management." },
+        title: "E-COMMERCE DASHBOARD",
+        category: "DEVELOPMENT",
+        description: { 
+            fr: "Un tableau de bord complet pour la gestion de ventes.", 
+            en: "A comprehensive dashboard for sales management." 
+        },
+        challenge: {
+            fr: "Centraliser les données de vente en temps réel avec des visualisations claires.",
+            en: "Centralize real-time sales data with clear visualizations."
+        },
+        success: {
+            fr: "Tableau de bord performant avec des graphiques dynamiques et réactifs.",
+            en: "High-performance dashboard with dynamic and reactive charts."
+        },
         tech: ["React", "Tailwind", "Recharts"],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
         links: { demo: "#", repo: "#" },
-        caseStudy: true
     },
     {
         id: 2,
-        title: "EcoWatch - Qualité de l'Air",
+        title: "ECOWATCH - QUALITÉ DE L'AIR",
+        category: "TOOLS",
         description: { 
             fr: "Application de surveillance environnementale permettant de détecter et d'analyser la qualité de l'air en temps réel.", 
             en: "Environmental monitoring application designed to detect and analyze air quality in real-time." 
         },
+        challenge: {
+            fr: "Traiter et afficher des données environnementales en continu avec précision.",
+            en: "Process and display continuous environmental data with precision."
+        },
+        success: {
+            fr: "Détection en temps réel avec alertes automatiques et visualisations intuitives.",
+            en: "Real-time detection with automatic alerts and intuitive visualizations."
+        },
         tech: ["Django", "HTML", "CSS", "Python"],
         image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800",
         links: { demo: "#", repo: "https://github.com/augustinkolie/groupe4" },
-        caseStudy: true
     },
     {
         id: 3,
-        title: "DME - Dossier Médical Électronique",
+        title: "DME - DOSSIER MÉDICAL ÉLECTRONIQUE",
+        category: "DEVELOPMENT",
         description: { 
             fr: "Système de numérisation et de gestion des dossiers médicaux pour les centres de santé en Guinée.", 
             en: "Digitalization and management system for medical records in Guinea's healthcare centers." 
+        },
+        challenge: {
+            fr: "Numériser les dossiers médicaux papier dans un système sécurisé et accessible.",
+            en: "Digitize paper medical records into a secure and accessible system."
+        },
+        success: {
+            fr: "Réduction du temps d'accès aux dossiers et amélioration du suivi patient.",
+            en: "Reduced record access time and improved patient tracking."
         },
         tech: ["Nest.js", "Next.js", "PostgreSQL", "Tailwind CSS"],
         image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800",
@@ -316,10 +344,19 @@ export const projectsData = [
     },
     {
         id: 4,
-        title: "Plateforme Éducative",
+        title: "PLATEFORME ÉDUCATIVE",
+        category: "DEVELOPMENT",
         description: {
             fr: "Système de gestion d'apprentissage avec cours en ligne, quiz interactifs et suivi des progrès.",
             en: "Learning management system with online courses, interactive quizzes and progress tracking."
+        },
+        challenge: {
+            fr: "Gérer le flux de données en temps réel pour les quiz et le suivi des élèves.",
+            en: "Manage real-time data flow for quizzes and student tracking."
+        },
+        success: {
+            fr: "Interface intuitive permettant une progression fluide et un suivi rigoureux.",
+            en: "Intuitive interface allowing fluid progression and rigorous monitoring."
         },
         tech: ["React", "Node.js", "PostgreSQL", "WebRTC"],
         image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800",
@@ -327,10 +364,19 @@ export const projectsData = [
     },
     {
         id: 5,
-        title: "Application de Restauration",
+        title: "APPLICATION DE RESTAURATION",
+        category: "DEVELOPMENT",
         description: {
             fr: "Plateforme de commande en ligne avec gestion de menu, réservations et livraison en temps réel.",
             en: "Online ordering platform with menu management, reservations and real-time delivery tracking."
+        },
+        challenge: {
+            fr: "Synchronisation des stocks et des commandes entre l'interface client et cuisine.",
+            en: "Synchronization of stocks and orders between client and kitchen interface."
+        },
+        success: {
+            fr: "Réduction des temps d'attente et gestion optimisée des flux de commandes.",
+            en: "Reduced waiting times and optimized order flow management."
         },
         tech: ["Next.js", "Stripe", "Firebase", "Google Maps"],
         image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
@@ -338,10 +384,19 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Boutique E-commerce",
+        title: "BOUTIQUE E-COMMERCE",
+        category: "DEVELOPMENT",
         description: {
             fr: "Site e-commerce complet avec panier, paiement sécurisé, gestion des stocks et tableau de bord admin.",
             en: "Full-featured e-commerce site with cart, secure payment, inventory management and admin dashboard."
+        },
+        challenge: {
+            fr: "Sécurisation des paiements et intégrité de la base de données produits.",
+            en: "Securing payments and integrity of the product database."
+        },
+        success: {
+            fr: "Expérience d'achat fluide avec un backend robuste et sécurisé.",
+            en: "Fluid shopping experience with a robust and secure backend."
         },
         tech: ["React", "Express", "MongoDB", "Stripe"],
         image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800",

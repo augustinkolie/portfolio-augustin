@@ -45,7 +45,7 @@ const Footer = () => {
                                 <a
                                     key={index}
                                     href={social.url}
-                                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+                                    className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
                                     aria-label={social.name}
                                 >
                                     {iconMap[social.icon]}
@@ -125,7 +125,7 @@ const Footer = () => {
                                 <span>{contactInfo.address}</span>
                             </div>
                             <div className="pt-4">
-                                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 text-green-500 text-xs font-bold border border-green-500/20">
+                                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-green-500/10 text-green-500 text-xs font-bold border border-green-500/20">
                                     <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                                     {contactInfo.availability[language]}
                                 </div>

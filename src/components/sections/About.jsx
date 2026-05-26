@@ -76,13 +76,13 @@ const About = () => {
                         <div className="flex flex-wrap gap-4 pt-4">
                             <a 
                                 href="#contact" 
-                                className="px-8 py-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition-colors shadow-lg shadow-red-500/20"
+                                className="px-8 py-4 border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-bold rounded-sm transition-all shadow-lg shadow-red-500/10"
                             >
                                 {language === 'fr' ? 'Planifier une consultation' : 'Schedule a consultation'}
                             </a>
                             <a 
                                 href="#services" 
-                                className="px-8 py-4 bg-gray-800 dark:bg-gray-700 hover:bg-gray-900 text-white font-bold rounded-lg transition-colors"
+                                className="px-8 py-4 border-2 border-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-600 hover:text-white font-bold rounded-sm transition-all"
                             >
                                 {language === 'fr' ? 'Mes Services' : 'My Services'}
                             </a>
@@ -97,7 +97,7 @@ const About = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="group p-4 bg-white dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10"
+                                    className="group p-4 bg-white dark:bg-gray-800/50 rounded-sm border border-gray-200 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10"
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="p-2 bg-orange-500/10 rounded-lg group-hover:bg-orange-500 transition-colors shrink-0">

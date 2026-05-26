@@ -29,6 +29,11 @@ html, body {
   position: relative;
 }
 
+/* Sharp & Crisp design: cap border-radius globally */
+button, input, textarea, select, a[role="button"] {
+  border-radius: 4px !important;
+}
+
 @layer utilities {
   .custom-scrollbar::-webkit-scrollbar {
     width: 6px;

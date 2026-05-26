@@ -60,7 +60,7 @@ const Hero = () => {
                                     transition={{ duration: 0.5 }}
                                 >
                                     <motion.span
-                                        className="inline-block py-1 px-4 rounded-full bg-primary/20 text-primary font-bold tracking-wider uppercase mb-8 border border-primary/20 text-[10px] sm:text-xs"
+                                        className="inline-block py-1 px-4 rounded-sm bg-primary/20 text-primary font-bold tracking-wider uppercase mb-8 border border-primary/20 text-[10px] sm:text-xs"
                                     >
                                         {heroSlides[currentIndex].title[language]}
                                     </motion.span>
@@ -81,7 +81,7 @@ const Hero = () => {
                              <a
                                 href={myCV}
                                 download="CV-Augustin-Kolie.pdf"
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white rounded-full font-bold hover:bg-white/10 transition-all backdrop-blur-sm hover:scale-105 active:scale-95 text-center text-sm"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white rounded-sm font-bold hover:bg-white/10 transition-all backdrop-blur-sm hover:scale-105 active:scale-95 text-center text-sm"
                             >
                                 {language === 'fr' ? 'Télécharger CV' : 'Download CV'}
                             </a>
@@ -147,14 +147,14 @@ const Hero = () => {
                 {/* Navigation Controls - Hidden on Mobile */}
                 <button
                     onClick={prevSlide}
-                    className="absolute top-1/2 left-4 md:left-8 transform -translate-y-1/2 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-primary text-white transition-all backdrop-blur-sm border border-white/10 z-20 group hidden md:flex"
+                    className="absolute top-1/2 left-4 md:left-8 transform -translate-y-1/2 p-2 sm:p-3 rounded-sm bg-white/10 hover:bg-primary text-white transition-all backdrop-blur-sm border border-white/10 z-20 group hidden md:flex"
                 >
                     <ChevronLeft size={20} className="sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
                 </button>
 
                 <button
                     onClick={nextSlide}
-                    className="absolute top-1/2 right-4 md:right-8 transform -translate-y-1/2 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-primary text-white transition-all backdrop-blur-sm border border-white/10 z-20 group hidden md:flex"
+                    className="absolute top-1/2 right-4 md:right-8 transform -translate-y-1/2 p-2 sm:p-3 rounded-sm bg-white/10 hover:bg-primary text-white transition-all backdrop-blur-sm border border-white/10 z-20 group hidden md:flex"
                 >
                     <ChevronRight size={20} className="sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
                 </button>
